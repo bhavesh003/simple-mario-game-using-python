@@ -9,11 +9,11 @@ BLACK = (0, 0, 0)
 GREEN = (0, 255, 0)
 ADD_NEW_FLAME_RATE = 25
 cactus_img = pygame.image.load(
-    'F:\Code Playground\Projects\Python Projects\Simple Mario Game/cactus_bricks.png')
+    'F:\Code Playground\Projects\Python Projects\Simple Mario Game\simple-mario-game-using-python/cactus_bricks.png')
 cactus_img_rect = cactus_img.get_rect()
 cactus_img_rect.left = 0
 fire_img = pygame.image.load(
-    'F:\Code Playground\Projects\Python Projects\Simple Mario Game/fire_bricks.png')
+    'F:\Code Playground\Projects\Python Projects\Simple Mario Game\simple-mario-game-using-python/fire_bricks.png')
 fire_img_rect = fire_img.get_rect()
 fire_img_rect.left = 0
 CLOCK = pygame.time.Clock()
@@ -41,7 +41,7 @@ class Dragon:
 
     def __init__(self):
         self.dragon_img = pygame.image.load(
-            'F:\Code Playground\Projects\Python Projects\Simple Mario Game/dragon.png')
+            'F:\Code Playground\Projects\Python Projects\Simple Mario Game\simple-mario-game-using-python\simple-mario-game-using-python/dragon.png')
         self.dragon_img_rect = self.dragon_img.get_rect()
         self.dragon_img_rect.width -= 10
         self.dragon_img_rect.height -= 10
@@ -70,7 +70,7 @@ class Flames:
 
     def __init__(self):
         self.flames = pygame.image.load(
-            'F:\Code Playground\Projects\Python Projects\Simple Mario Game/fireball.png')
+            'F:\Code Playground\Projects\Python Projects\Simple Mario Game\simple-mario-game-using-python/fireball.png')
         self.flames_img = pygame.transform.scale(self.flames, (20, 20))
         self.flames_img_rect = self.flames_img.get_rect()
         self.flames_img_rect.right = dragon.dragon_img_rect.left
@@ -88,7 +88,7 @@ class Mario:
 
     def __init__(self):
         self.mario_img = pygame.image.load(
-            'F:\Code Playground\Projects\Python Projects\Simple Mario Game/maryo.png')
+            'F:\Code Playground\Projects\Python Projects\Simple Mario Game\simple-mario-game-using-python/maryo.png')
         self.mario_img_rect = self.mario_img.get_rect()
         self.mario_img_rect.left = 20
         self.mario_img_rect.top = WINDOW_HEIGHT/2 - 100
@@ -114,11 +114,11 @@ class Mario:
 def game_over():
     pygame.mixer.music.stop()
     music = pygame.mixer.Sound(
-        'F:\Code Playground\Projects\Python Projects\Simple Mario Game/mario_dies.wav')
+        'F:\Code Playground\Projects\Python Projects\Simple Mario Game\simple-mario-game-using-python/mario_dies.wav')
     music.play()
     topscore.top_score(SCORE)
     game_over_img = pygame.image.load(
-        'F:\Code Playground\Projects\Python Projects\Simple Mario Game/end.png')
+        'F:\Code Playground\Projects\Python Projects\Simple Mario Game\simple-mario-game-using-python/end.png')
     game_over_img_rect = game_over_img.get_rect()
     game_over_img_rect.center = (WINDOW_WIDTH/2, WINDOW_HEIGHT/2)
     canvas.blit(game_over_img, game_over_img_rect)
@@ -139,7 +139,7 @@ def game_over():
 def start_game():
     canvas.fill(BLACK)
     start_img = pygame.image.load(
-        'F:\Code Playground\Projects\Python Projects\Simple Mario Game/start.png')
+        'F:\Code Playground\Projects\Python Projects\Simple Mario Game\simple-mario-game-using-python/start.png')
     start_img_rect = start_img.get_rect()
     start_img_rect.center = (WINDOW_WIDTH/2, WINDOW_HEIGHT/2)
     canvas.blit(start_img, start_img_rect)
@@ -188,7 +188,7 @@ def game_loop():
         global HIGH_SCORE
         flames_list = []
         pygame.mixer.music.load(
-            'F:\Code Playground\Projects\Python Projects\Simple Mario Game/mario_theme.wav')
+            'F:\Code Playground\Projects\Python Projects\Simple Mario Game\simple-mario-game-using-python/mario_theme.wav')
         pygame.mixer.music.play(-1, 0.0)
         while True:
             canvas.fill(BLACK)
